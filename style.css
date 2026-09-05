@@ -71,11 +71,84 @@ footer {
     background-color: #777777;
     color: white;
     text-align: center;
+}
+
+
+/* 実行委員会紹介 */
+
+.committee-row {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.committee-member {
+    width: 300px;
+    text-align: center;
+}
+
+.committee-photo {
+    width: 100%;
+    height: 300px;
+    background-color: #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777777;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.committee-member h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.committee-name {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.committee-name rt {
     font-size: 12px;
+}
+
+.committee-school {
+    margin: 0 0 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.committee-introduction {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+
+/* 2人の段 */
+
+.two-members {
+    grid-template-columns: repeat(2, 300px);
+}
+
+
+/* 3人の段 */
+
+.three-members {
+    grid-template-columns: repeat(3, 300px);
 }
 
 
 /* スマートフォン用 */
+
 @media (max-width: 600px) {
 
     h1 {
@@ -116,6 +189,22 @@ footer {
     .footer-info p {
         font-size: 14px;
         overflow-wrap: break-word;
+    }
+
+
+    /* 実行委員会紹介・スマートフォン用 */
+
+    .committee-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .committee-member {
+        width: 100%;
+        max-width: 300px;
     }
 
 }
