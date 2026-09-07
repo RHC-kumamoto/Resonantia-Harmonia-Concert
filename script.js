@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <nav>
             <a href="index.html">HOME</a>
             <a href="rhc.html">RHCとは</a>
+            <a href="visitors.html">来場者の方へ</a>
+            <a href="documents.html">各種書類</a>
             <a href="committee.html">実行委員会紹介</a>
-            <a href="documents.html">各種書類ダウンロード</a>
             <a href="activities.html">活動の様子</a>
         </nav>
     `;
