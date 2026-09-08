@@ -165,24 +165,6 @@ footer {
 }
 
 
-/* 活動の様子・写真ギャラリー */
-
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.photo-gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-
 /* スマートフォン用 */
 
 @media (max-width: 1000px) {
@@ -252,24 +234,6 @@ footer {
     .committee-member {
         width: 100%;
         max-width: 300px;
-    }
-
-
-    /* 写真ギャラリー・スマートフォン用 */
-
-    .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .photo-gallery {
-        grid-template-columns: 1fr;
-        gap: 15px;
     }
 
 }
