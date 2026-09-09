@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>実行委員会管理ページ | Resonantia Harmonia Concert</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <main class="admin-main">
+
+        <h2>実行委員会管理ページ</h2>
+
+
+        <!-- =========================
+             ログイン
+             ========================= -->
+
+        <section id="login-section" class="admin-login">
+
+            <h2>実行委員会専用</h2>
+
+            <p>
+                このページはResonantia Harmonia Concert実行委員会専用です。
+            </p>
+
+            <label class="admin-label" for="admin-password">
+                パスワード
+            </label>
+
+            <input
+                type="password"
+                id="admin-password"
+                class="admin-input"
+                autocomplete="off"
+            >
+
+            <button id="login-button" class="admin-button">
+                ログイン
+            </button>
+
+            <p id="login-message" class="admin-message" style="display: none;"></p>
+
+        </section>
+
+
+        <!-- =========================
+             管理画面
+             ========================= -->
+
+        <section id="admin-section" class="admin-panel admin-hidden">
+
+            <h2>お知らせ管理</h2>
+
+            <p>
+                お知らせの追加・編集・削除ができます。
+            </p>
+
+
+            <!-- =========================
+                 新規追加・編集フォーム
+                 ========================= -->
+
+            <div class="admin-news-form">
+
+                <h3 id="form-title">
+                    お知らせを追加
+                </h3>
+
+
+                <label class="admin-label" for="news-date-input">
+                    日付
+                </label>
+
+                <input
+                    type="date"
+                    id="news-date-input"
+                    class="admin-input"
+                >
+
+
+                <label class="admin-label" for="news-title-input">
+                    タイトル
+                </label>
+
+                <input
+                    type="text"
+                    id="news-title-input"
+                    class="admin-input"
+                    placeholder="例：ホームページを更新しました"
+                >
+
+
+                <label class="admin-label" for="news-detail-input">
+                    詳細
+                </label>
+
+                <textarea
+                    id="news-detail-input"
+                    class="admin-textarea"
+                    placeholder="お知らせの詳細を入力してください。"
+                ></textarea>
+
+
+                <div class="admin-button-group">
+
+                    <button
+                        id="save-news-button"
+                        class="admin-button"
+                    >
+                        お知らせを追加
+                    </button>
+
+                    <button
+                        id="cancel-edit-button"
+                        class="admin-button admin-button-edit"
+                        style="display: none;"
+                    >
+                        編集をキャンセル
+                    </button>
+
+                </div>
+
+
+                <p
+                    id="admin-message"
+                    class="admin-message"
+                    style="display: none;"
+                ></p>
+
+            </div>
+
+
+            <!-- =========================
+                 お知らせ一覧
+                 ========================= -->
+
+            <h3>登録済みのお知らせ</h3>
+
+            <div id="admin-news-list">
+                <p>
+                    読み込んでいます……
+                </p>
+            </div>
+
+
+            <a href="index.html" class="admin-back">
+                ← ホームページへ戻る
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer id="footer"></footer>
+
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- 通常サイト用 -->
+    <script src="script.js"></script>
+
+    <!-- 管理ページ用 -->
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
