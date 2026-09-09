@@ -72,14 +72,138 @@ footer {
 }
 
 .copyright {
-    padding: 15px;
+    position: relative;
+    padding: 15px 120px 15px 15px;
     background-color: #777777;
     color: white;
     text-align: center;
+    box-sizing: border-box;
 }
 
 
-/* Googleマップ */
+/* =========================
+   お知らせ
+   ========================= */
+
+.news {
+    margin-bottom: 40px;
+}
+
+.news details {
+    border-bottom: 1px solid #cccccc;
+}
+
+.news summary {
+    padding: 15px 5px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.news summary::-webkit-details-marker {
+    display: none;
+}
+
+.news summary::after {
+    content: "＋";
+    float: right;
+    font-size: 20px;
+}
+
+.news details[open] summary::after {
+    content: "−";
+}
+
+.news-date {
+    display: inline-block;
+    width: 120px;
+    color: #666666;
+}
+
+.news-detail {
+    padding: 10px 25px 20px;
+    background-color: #eeeeee;
+}
+
+.news-detail p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.news-loading {
+    color: #666666;
+    font-size: 16px;
+}
+
+.news-error {
+    color: #aa0000;
+    font-size: 16px;
+}
+
+.news-empty {
+    color: #666666;
+    font-size: 16px;
+}
+
+
+/* =========================
+   もっと見るボタン
+   ========================= */
+
+.show-more-news {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 30px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.show-more-news:hover {
+    background-color: #555555;
+}
+
+
+/* =========================
+   管理者用ボタン
+   ========================= */
+
+.admin-link {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    background-color: #666666;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    border-radius: 4px;
+
+    opacity: 0.8;
+}
+
+.admin-link:hover {
+    background-color: #555555;
+    opacity: 1;
+}
+
+
+/* =========================
+   Googleマップ
+   ========================= */
 
 .access-map {
     width: 100%;
@@ -100,7 +224,9 @@ footer {
 }
 
 
-/* 実行委員会紹介 */
+/* =========================
+   実行委員会紹介
+   ========================= */
 
 .committee-row {
     display: grid;
@@ -165,7 +291,129 @@ footer {
 }
 
 
-/* スマートフォン用 */
+/* =========================
+   管理ページ
+   ========================= */
+
+.admin-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.admin-login,
+.admin-panel {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 30px;
+    border: 1px solid #dddddd;
+}
+
+.admin-login h2,
+.admin-panel h2 {
+    margin-top: 0;
+}
+
+.admin-input,
+.admin-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.admin-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.admin-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.admin-button {
+    padding: 10px 25px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.admin-button:hover {
+    background-color: #555555;
+}
+
+.admin-button-delete {
+    background-color: #990000;
+}
+
+.admin-button-delete:hover {
+    background-color: #bb0000;
+}
+
+.admin-button-edit {
+    background-color: #555555;
+}
+
+.admin-message {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #eeeeee;
+    font-size: 15px;
+}
+
+.admin-news-item {
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.admin-news-date {
+    color: #666666;
+    font-size: 14px;
+}
+
+.admin-news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.admin-news-detail {
+    font-size: 15px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    margin-bottom: 15px;
+}
+
+.admin-button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.admin-hidden {
+    display: none;
+}
+
+.admin-back {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333333;
+}
+
+
+/* =========================
+   スマートフォン用
+   ========================= */
 
 @media (max-width: 1000px) {
 
@@ -210,7 +458,34 @@ footer {
     }
 
 
-    /* Googleマップ・スマートフォン用 */
+    /* =========================
+       お知らせ・スマートフォン用
+       ========================= */
+
+    .news summary {
+        padding: 14px 5px;
+        font-size: 16px;
+    }
+
+    .news-date {
+        display: block;
+        width: auto;
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .news-detail {
+        padding: 10px 15px 15px;
+    }
+
+    .news-detail p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       Googleマップ・スマートフォン用
+       ========================= */
 
     .access-map iframe {
         height: 350px;
@@ -221,7 +496,9 @@ footer {
     }
 
 
-    /* 実行委員会紹介・スマートフォン用 */
+    /* =========================
+       実行委員会紹介・スマートフォン用
+       ========================= */
 
     .committee-row {
         display: flex;
@@ -234,6 +511,44 @@ footer {
     .committee-member {
         width: 100%;
         max-width: 300px;
+    }
+
+
+    /* =========================
+       管理ページ・スマートフォン用
+       ========================= */
+
+    .admin-main {
+        padding: 20px;
+    }
+
+    .admin-login,
+    .admin-panel {
+        padding: 20px;
+    }
+
+    .admin-button-group {
+        flex-direction: column;
+    }
+
+    .admin-button-group .admin-button {
+        width: 100%;
+    }
+
+
+    /* =========================
+       管理者用ボタン・スマートフォン用
+       ========================= */
+
+    .copyright {
+        padding: 15px 100px 15px 10px;
+        font-size: 14px;
+    }
+
+    .admin-link {
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 10px;
     }
 
 }
