@@ -73,11 +73,19 @@ footer {
 
 .copyright {
     position: relative;
-    padding: 15px 120px 15px 15px;
+    height: 50px;
     background-color: #777777;
     color: white;
     text-align: center;
     box-sizing: border-box;
+}
+
+.copyright span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
 }
 
 
@@ -541,7 +549,7 @@ footer {
        ========================= */
 
     .copyright {
-        padding: 15px 100px 15px 10px;
+        height: 50px;
         font-size: 14px;
     }
 
