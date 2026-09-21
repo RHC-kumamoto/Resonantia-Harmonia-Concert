@@ -1,59 +1,67 @@
-document.addEventListener("DOMContentLoaded", function () {
+<html lang="ja">
 
-    /* =========================
-       ヘッダー
-       ========================= */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    const header = document.getElementById("header");
+    <title>お申込み｜Resonantia Harmonia Concert</title>
 
-    if (header) {
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        header.innerHTML = `
-            <h1>Resonantia Harmonia Concert</h1>
+<body>
 
-            <nav>
-                <a href="index.html">HOME</a>
-                <a href="rhc.html">RHCとは</a>
-                <a href="application.html">お申込み</a>
-                <a href="documents.html">各種書類</a>
-                <a href="visitors.html">ご来場の方へ</a>
-                <a href="committee.html">実行委員会紹介</a>
-            </nav>
-        `;
+    <header id="header"></header>
 
-    }
+    <main>
+
+        <h2>お申込み</h2>
+
+        <p>
+            Resonantia Harmonia Concertへの参加・出演を希望される方は、
+            以下をご確認のうえ、お申し込みください。
+        </p>
 
 
-    /* =========================
-       フッター
-       ========================= */
+        <h2>お申し込み手順</h2>
 
-    const footer = document.getElementById("footer");
+        <h3>① 各種書類を確認する</h3>
 
-    if (footer) {
+        <p>
+            お申し込みの前に、各種書類ページに掲載されている各種書類をご確認ください。
+            特に「出演者募集要項」および「参加・出演承諾書」の内容を
+            必ずご確認ください。
+        </p>
 
-        footer.innerHTML = `
-            <div class="footer-content">
 
-                <div class="footer-image">
-                </div>
+        <h3>② 参加・出演承諾書に必要事項を記入する</h3>
 
-                <div class="footer-info">
-                    <p>Resonantia Harmonia Concert 実行委員会</p>
-                    <p>TEL：<a href="tel:08091008296">080-9100-8296</a> (代表 林田)</p>
-                    <p>Email：<a href="mailto:kentachan39@icloud.com">kentachan39@icloud.com</a> (代表 林田)</p>
-                    <p>運営支援・成人運営安全管理責任者：株式会社サクラハーモニー 代表 齋藤麻希</p>
-                    <p>TEL：<a href="tel:07052744478">070-5274-4478</a></p>
-                    <p>email：<a href="mailto:sakuraharmony55@gmail.com">sakuraharmony55@gmail.com</a></p>
-                </div>
+        <p>
+            「参加・出演承諾書」をダウンロードして印刷していただき、必要事項をご記入ください。
+        </p>
 
-            </div>
 
-            <div class="copyright">
-                <span>© 2027 Resonantia Harmonia Concert</span>
-            </div>
-        `;
+        <h3>③ 参加申し込みフォームに入力する</h3>
 
-    }
+        <p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHl9zlCWB2_wut4iedDNeGE-rcU9-S-yfXneR4IWRNYsq64Q/viewform" target="_blank"> 参加申し込みフォーム</a>
+            から必要事項を入力してください。
+        </p>
 
-});
+
+        <h3>④ 申し込み内容を確認して送信する</h3>
+
+        <p>
+            入力内容に間違いがないことを確認し、フォームを送信してください。
+            送信後は、運営からの案内をご確認ください。
+        </p>
+        
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
