@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="application.html">お申込み</a>
                 <a href="documents.html">各種書類</a>
                 <a href="visitors.html">ご来場の方へ</a>
-                <a href="committee.html">実行委員会紹介</a>
             </nav>
         `;
 
