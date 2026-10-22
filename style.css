@@ -1,9 +1,20 @@
+:root {
+    --rhc-green: #263B2C;
+    --rhc-green-dark: #1B2B20;
+    --rhc-green-soft: #40533A;
+    --rhc-gold: #B18A42;
+    --rhc-gold-light: #D8C28B;
+    --rhc-ivory: #F7F0E2;
+    --rhc-paper: #EFE5D1;
+    --rhc-text: #2B352A;
+}
+
 body {
     margin: 0;
-    font-family: sans-serif;
-    background-color: #f5f5f5;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    background-color: var(--rhc-ivory);
     text-align: left;
-    color: #333333;
+    color: var(--rhc-text);
 }
 
 nav {
@@ -11,12 +22,19 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    background-color: #333333;
+    background-color: var(--rhc-green);
+    border-top: 1px solid var(--rhc-gold);
+    border-bottom: 1px solid var(--rhc-gold);
 }
 
 nav a {
-    color: #ffffff;
+    color: var(--rhc-ivory);
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--rhc-gold-light);
 }
 
 main {
@@ -28,35 +46,50 @@ main {
 h1 {
     margin: 0;
     padding: 50px;
-    background-color: #222222;
-    color: white;
+    background-color: var(--rhc-green-dark);
+    color: var(--rhc-ivory);
     font-size: 32px;
     text-align: center;
+    border-bottom: 3px double var(--rhc-gold);
 }
 
 h2 {
     margin-top: 40px;
-    color: #333333;
+    color: var(--rhc-green);
+    border-bottom: 1px solid var(--rhc-gold);
+    padding-bottom: 10px;
 }
 
 h3 {
     margin-top: 0px;
-    color: #333333;
+    color: var(--rhc-green);
 }
 
 h4 {
     margin-top: 0px;
-    color: #333333;
+    color: var(--rhc-green);
 }
 
 p {
     font-size: 18px;
     line-height: 1.8;
+    font-weight: 500;
+}
+
+a {
+    color: var(--rhc-green-soft);
+    text-decoration-color: var(--rhc-gold);
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #8A672B;
 }
 
 footer {
     margin-top: 60px;
-    background-color: #eeeeee;
+    background-color: var(--rhc-paper);
+    border-top: 2px solid var(--rhc-gold);
 }
 
 .footer-content {
@@ -74,10 +107,11 @@ footer {
 .copyright {
     position: relative;
     height: 50px;
-    background-color: #777777;
-    color: white;
+    background-color: var(--rhc-green-dark);
+    color: var(--rhc-ivory);
     text-align: center;
     box-sizing: border-box;
+    border-top: 1px solid var(--rhc-gold);
 }
 
 .copyright span {
@@ -88,11 +122,7 @@ footer {
     white-space: nowrap;
 }
 
-
-/* =========================
-   Googleマップ
-   ========================= */
-
+/* Googleマップ */
 .access-map {
     width: 100%;
     margin: 20px 0 10px;
@@ -102,7 +132,7 @@ footer {
     display: block;
     width: 100%;
     height: 450px;
-    border: 0;
+    border: 1px solid var(--rhc-gold);
 }
 
 .map-note {
@@ -111,11 +141,7 @@ footer {
     font-size: 16px;
 }
 
-
-/* =========================
-   実行委員会紹介
-   ========================= */
-
+/* 実行委員会紹介 */
 .committee-row {
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -133,12 +159,14 @@ footer {
 .committee-photo {
     width: 100%;
     height: 300px;
-    background-color: #dddddd;
+    background-color: var(--rhc-paper);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin-bottom: 15px;
+    border: 1px solid var(--rhc-gold);
+    box-sizing: border-box;
 }
 
 .committee-photo img {
@@ -178,13 +206,8 @@ footer {
     text-align: left;
 }
 
-
-/* =========================
-   スマートフォン用
-   ========================= */
-
+/* スマートフォン用 */
 @media (max-width: 1000px) {
-
     h1 {
         padding: 30px 15px;
         font-size: 24px;
@@ -225,11 +248,6 @@ footer {
         overflow-wrap: break-word;
     }
 
-
-    /* =========================
-       Googleマップ・スマートフォン用
-       ========================= */
-
     .access-map iframe {
         height: 350px;
     }
@@ -237,11 +255,6 @@ footer {
     .map-note {
         font-size: 14px;
     }
-
-
-    /* =========================
-       実行委員会紹介・スマートフォン用
-       ========================= */
 
     .committee-row {
         display: flex;
@@ -254,5 +267,11 @@ footer {
     .committee-member {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav a {
+        transition: none;
     }
 }
