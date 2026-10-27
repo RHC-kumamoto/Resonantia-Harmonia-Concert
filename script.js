@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
 
             <div class="copyright">
-                <span>© 2027 Resonantia Harmonia Concert</span>
+                <span>© 2026 Resonantia Harmonia Concert</span>
             </div>
         `;
 
