@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
 
                 <div class="footer-info">
-                    <p>Resonantia Harmonia Concert 実行委員会</p>
-                    <p>TEL：<a href="tel:08091008296">080-9100-8296</a> (代表 林田)</p>
-                    <p>Email：<a href="mailto:kentachan39@icloud.com">kentachan39@icloud.com</a> (代表 林田)</p>
+                    <p>Resonantia Harmonia Concert 実行委員会 代表 林田健汰</p>
+                    <p>TEL：<a href="tel:08091008296">080-9100-8296</a></p>
+                    <p>Email：<a href="mailto:kentachan39@icloud.com">kentachan39@icloud.com</a></p>
                     <p>運営支援・成人運営安全管理責任者：株式会社サクラハーモニー 代表 齋藤麻希</p>
                     <p>TEL：<a href="tel:07052744478">070-5274-4478</a></p>
                     <p>email：<a href="mailto:sakuraharmony55@gmail.com">sakuraharmony55@gmail.com</a></p>
